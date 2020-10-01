@@ -1,1 +1,1 @@
-# hamiat.github.io
+Play the game @ hamiat.github.io
