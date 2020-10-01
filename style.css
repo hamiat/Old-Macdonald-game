@@ -1,0 +1,125 @@
+html {
+    box-sizing: border-box;
+    height: 100%;
+
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: (autofit, 1fr 1fr 1fr);
+    grid-gap: 1rem;
+    background-color: white;
+    
+}
+
+.box {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    background-color: none;
+
+}
+
+.a {
+    grid-column:  1 / span 1;
+    grid-row: 1;
+}
+
+
+ul li{
+    list-style: none;
+    margin: 20px;  
+} 
+
+.b {
+    grid-column:  3 / span 1;
+    grid-row: 1;
+}
+
+.c {
+    grid-column:  2 / span 1;
+    grid-row: 2;
+}
+
+.d {
+    grid-column:  1 / span 1;
+    grid-row: 3;
+}
+
+.e {
+    grid-column:  3 / span 1;
+    grid-row: 3;
+}
+
+@keyframes blinkingText {
+    0% {transform: scale(0);}
+    50% {transform: scale(1);}
+    100% {transform: scale(0);}
+}
+
+@keyframes spinText {
+    0% {transform: rotate(0deg);}
+    25% {transform: rotate(45deg);}
+    50% {transform: rotate(90deg);}
+    75% {transform: rotate(180deg);}
+    100% {transform: rotate(360deg);}
+}
+
+#lastVerse {
+    animation: spinText;
+    animation-duration: 3ss;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+
+button {
+    font-family: monospace;
+}
+
+p {
+    font-family: 'Crimson Pro',serif;
+    font-size: 1rem;
+    font-style: italic;
+    font-display: auto;
+    font-variation-settings: 'wght' 400;
+    line-height: 1.5;
+    font-feature-settings: 'dlig';
+    box-shadow: 1px 1px 1px 0px #42d1f5 ; 
+    /* border-style: dotted; */
+    border-width: 2px;
+    cursor: pointer;
+    &:hoover: ;
+
+} 
+
+#lastWord {
+    visibility: hidden;
+
+}
+
+#cowPic {
+    visibility: hidden;
+
+}
+
+#emptyBox1 {
+    border-style: none;
+}
+
+#moo1 {
+    border-style: none;
+    box-shadow: none;
+}
+
+#moo2 {
+    border-style: none;
+    box-shadow: none;
+}
+
+.farmMenu p {
+    border-style: none;
+    cursor: default;
+    box-shadow: none;
+}
