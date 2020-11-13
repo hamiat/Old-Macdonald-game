@@ -50,11 +50,20 @@ ul li{
 .e {
     grid-column:  3 / span 1;
     grid-row: 3;
+    margin-top: 1em;
 }
+
+@keyframes blinkingText {
+    0% {transform: scale(0);}
+    50% {transform: scale(1);}
+    100% {transform: scale(0);}
+}
+
 
 button {
     font-family: monospace;
 }
+
 
 p {
     font-family: 'Crimson Pro',serif;
@@ -68,7 +77,6 @@ p {
     /* border-style: dotted; */
     border-width: 2px;
     cursor: pointer;
-    &:hoover: ;
 
 } 
 
