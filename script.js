@@ -79,7 +79,8 @@ let lastLine = document.querySelector("lastWord");
 function finalMcdonald() {
   document.getElementById("lastWord").style.visibility = "visible";
   document.getElementById("lastWord").style.color = "#ff7f50";
-  document.getElementById("lastWord").style.transform = "scale(4)";
+  document.getElementById("lastWord").style.transform = "scale(3)";
+  document.getElementById("lastWord").style.marginTop = "24px";
 }
 
 lastMcdonald.addEventListener("click", finalMcdonald);
