@@ -1,18 +1,23 @@
-html {
+body {
   box-sizing: border-box;
   height: 100vh;
+  overflow: hidden;
 }
 
 h1 {
-  margin: 0 auto;
   padding: 48px 32px 58px 32px;
-  width: max-content;
+  width: 100%;
   font-size: 4vw;
   color: #ff7f50;
+  text-align: center;
+  white-space: normal; /* ensures wrapping is allowed */
+  word-wrap: break-word; /* optional: breaks long words if needed */
+  overflow-wrap: break-word; /* newer alternative */
 }
 
 i {
   color: #ff7f50;
+  cursor: pointer;
 }
 
 .container {
@@ -49,7 +54,7 @@ ul li {
 }
 
 .d {
-  grid-column: 1 / span 1;
+  grid-column: 2 / span 1;
   grid-row: 3;
 }
 
@@ -60,6 +65,16 @@ ul li {
 }
 
 @media (max-width: 400px) {
+  body {
+    overflow: scroll;
+    overflow-x: hidden;
+  }
+
+  h1 {
+    font-size: 24px;
+    padding: 1vw 1vw;
+  }
+
   .container {
     display: flex;
     flex-direction: column;
@@ -70,17 +85,15 @@ ul li {
     width: 100%;
   }
 
-  h1 {
-    font-size: 6vw;
-    padding: 32px 16px;
-  }
-
   #hereBtn {
     height: 180px;
   }
 
   #lastWord {
     font-size: 3vw;
+  }
+  footer{
+    padding-top: 0;
   }
 }
 
@@ -106,13 +119,14 @@ button {
   font-size: 14px;
   transition: all 0.2s ease;
   box-shadow: #42d1f5 2px 2px 0px 0px;
+  cursor: pointer;
 }
 
 button:hover:not(:first-child),
 p:hover {
   transform: translateX(-2px) translateY(-2px) translateZ(0px);
   box-shadow: #ff7f50 2px 2px 2px;
-  background-color: #42d1f5;
+  background-color: #8bffe6;
 }
 
 #submitAnswer {
@@ -168,7 +182,12 @@ footer {
   padding: 10px;
 }
 
-footer a {
-  color: #ff7f50;
-  font-weight: bolder;
+footer i {
+  color: #313113;
+  padding-top: 24px;
+}
+
+footer i:hover {
+  color: #743822;
+
 }
